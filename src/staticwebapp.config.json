@@ -1,5 +1,16 @@
 {
     "trailingSlash": "auto",
+    "auth": {
+        "identityProviders": {
+          "azureActiveDirectory": {
+            "registration": {
+              "openIdIssuer": "https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47/v2.0",
+              "clientIdSettingName": "AZURE_CLIENT_ID",
+              "clientSecretSettingName": "AZURE_CLIENT_SECRET"
+            }
+          }
+        }
+      },
     "routes": [
       {
         "route": "/test.html",
@@ -29,6 +40,10 @@
     "responseOverrides": {
       "400": {
         "rewrite": "/400.html"
+      },
+      "401": {
+        "rewrite": "/login",
+        "status": 302
       },
       "403": {
         "rewrite": "/403.html"

@@ -1,4 +1,4 @@
-name: Deploy to polite-bay-01d6dfa10.3.azurestaticapps.net
+name: jianw-swa7 - polite-bay-01d6dfa10.3.azurestaticapps.net
 
 on:
   push:
